@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+    - "8000:8000"
+  links:
+   - redis
+redis:
+  image: 192.168.30.52:5000/redis:latest
+  ports:
+    - "6379"
